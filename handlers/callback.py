@@ -15,8 +15,8 @@ from config import (
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-     await message.reply_text(
-       f"""✨ **Welcome {message.from_user.mention()} !**\n
+    await query.edit_message_text(
+        f"""✨ **Welcome {message.from_user.mention()} !**\n
 💭 **Kirimkan nama artis dan/atau nama lagu dan saya akan mencarikan musik untuk kamu!**
 """,
         reply_markup=InlineKeyboardMarkup(
