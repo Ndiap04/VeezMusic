@@ -59,7 +59,7 @@ async def start_private(client: Client, message: Message):
             [
                [
                 InlineKeyboardButton(
-                    "Perintah", callback_data="close",
+                    "Perintah", callback_data="cbbasic",
                     )
                 ],
             ]
