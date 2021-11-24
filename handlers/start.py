@@ -53,103 +53,16 @@ async def _human_time_duration(seconds):
 async def start_private(client: Client, message: Message):
     await message.reply_text(
         f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music on groups through the new Telegram's voice chats!**
-
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
-
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+💭 **Kirimkan nama artis dan/atau nama lagu dan saya akan mencarikan musik untuk kamu!**
+""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    )
-                ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
-                [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_NAME}"),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/VeezMusic"
+               [
+                InlineKeyboardButton(
+                    "Perintah", callback_data="close",
                     )
                 ],
             ]
         ),
         disable_web_page_preview=True,
-    )
-
-
-@Client.on_message(
-    command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited
-)
-async def start_group(client: Client, message: Message):
-    current_time = datetime.utcnow()
-    uptime_sec = (current_time - START_TIME).total_seconds()
-    uptime = await _human_time_duration(int(uptime_sec))
-
-    keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
-                ),
-            ]
-        ]
-    )
-
-    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ Bot Version: `v{__version__}`\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**Thanks for Adding me here, for playing music on your Group voice chat** ❤"
-
-    await message.reply_photo(
-        photo=f"{ALIVE_IMG}",
-        caption=alive,
-        reply_markup=keyboard,
-    )
-
-
-@Client.on_message(
-    command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited
-)
-async def help(client: Client, message: Message):
-    await message.reply_text(
-        f"""✨ **Hello** {message.from_user.mention()} !
-
-» **press the button below to read the explanation and see the list of available commands !**
-
-⚡ __Powered by {BOT_NAME} A.I__""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="❓ Basic Guide", callback_data="cbguide")]]
-        ),
-    )
-
-
-@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
-async def ping_pong(client: Client, message: Message):
-    start = time()
-    m_reply = await message.reply_text("pinging...")
-    delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
-
-
-@Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
-@sudo_users_only
-async def get_uptime(client: Client, message: Message):
-    current_time = datetime.utcnow()
-    uptime_sec = (current_time - START_TIME).total_seconds()
-    uptime = await _human_time_duration(int(uptime_sec))
-    await message.reply_text(
-        "🤖 bot status:\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
     )
