@@ -2,7 +2,7 @@
 
 from helpers.decorators import authorized_users_only
 from pyrogram import Client, filters
-from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from config import (
     ASSISTANT_NAME,
     BOT_NAME,
@@ -52,7 +52,7 @@ async def cbstart(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbmulai"))
 async def cbmulai(_, query: CallbackQuery):
-    await client.send_photo(message.chat.id,
+    await client.send_photo(CallbackQuery.chat.id,
         photo=f"{BOT_IMG}",
         caption=f"""**{alv} Holla {message.from_user.mention()}, I'm {bn}.**
 {alv} **I'm Working Properly**
