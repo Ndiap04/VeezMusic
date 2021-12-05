@@ -185,9 +185,11 @@ async def cbpdkt13(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ㅤㅤㅤㅤ""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbhelp")
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbhelp")
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbhelp")
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbhelp")]]
+            [
+                [InlineKeyboardButton("Menyapanya", callback_data="cbhelp")],
+                [InlineKeyboardButton("Sok Kenal", callback_data="cbhelp")],
+                [InlineKeyboardButton("Pura² Salah Orang", callback_data="cbhelp")],
+                [InlineKeyboardButton("Pura² Menabraknya", callback_data="close")],
+            ]
         ),
     )
