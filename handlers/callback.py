@@ -182,7 +182,7 @@ async def cbpdkt12(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbpdkt13"))
 async def cbpdkt13(_, query: CallbackQuery):
-    await query.edit_message_text(
+    await query.edit_Message_text(
         f"""ㅤㅤㅤㅤ""",
         reply_markup=InlineKeyboardMarkup(
             [
