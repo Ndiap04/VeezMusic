@@ -80,8 +80,8 @@ yang loh taksir sejak dulu.
         ),
     )
 
-@Client.on_callback_query(filters.regex("cbmulai"))
-async def cbmulai(_, query: CallbackQuery):
+@Client.on_callback_query(filters.regex("cbpdkt1"))
+async def cbpdkt1(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""hi
 
