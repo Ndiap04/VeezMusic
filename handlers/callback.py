@@ -52,17 +52,58 @@ async def cbstart(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbmulai"))
 async def cbmulai(_, query: CallbackQuery):
-    await query.send_photo(CallbackQuery.chat.id,
-        photo=f"{BOT_IMG}",
-        caption=f"""**halo semua**
-**Thanks For Using Me ❤️**""",
+    await query.edit_message_text(
+        f"""⛔ **Peringatan Untuk Anda!**
+
+🙇 Dimohon Untuk Tidak Menghapus Pesan Ketika Game Sedang Berlangsung!
+Ketika Kamu Sudah Mencapai PDKT2 Dan Seterusnya Dan Kamu Menghapus Pesan Nya 
+Kamu Akan Mengulang Dari Awal Kembali!
+
+👨 Ketika Kamu Ingin Beristirahat Kamu Keluar Dari Bot Saja Jangan Menghapus Pesannya
+Kirim Donasi Jika Anda Terlanjur Menghapus Pesannya Dan Ingin Melanjutkannya!**""",
     keyboard = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "💨 Download", url=f"https://t.me/RessoMusicRobot?start=Z2V0LTQyMDczNDg3NzQ2ODM2"
+                    "✅ Mengerti Dan Lanjutkan", callback_data="cbpdkt"
                 ),
             ]
         ]
     )
 
+@Client.on_callback_query(filters.regex("cbpdkt"))
+async def cbpdkt(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""**PDKT**
+
+Tahun ini merupakan tahun terakhir loh di
+SMA. dan loh berniat untuk ngewujudin
+impian loh semua yang belum tercapai,
+yaitu jadian sama **Sabrina**, cewek cantik tapi judes
+yang loh taksir sejak dulu.
+**Berhasil Loh Dapatin Sabrina?**
+**""",
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "Lanjutkan", callback_data="cbupdate"
+                ),
+            ]
+        ]
+    )
+
+@Client.on_callback_query(filters.regex("cbmulai"))
+async def cbmulai(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""
+Kirim Donasi Jika Anda Terlanjur Menghapus Pesannya Dan Ingin Melanjutkannya!**""",
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "✅ Mengerti Dan Lanjutkan", callback_data="cbupdate"
+                ),
+            ]
+        ]
+    )
