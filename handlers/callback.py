@@ -48,8 +48,6 @@ async def cbstart(_, query: CallbackQuery):
      disable_web_page_preview=True
     )
 
-#MulaiPermainan
-
 @Client.on_callback_query(filters.regex("cbmulai"))
 async def cbmulai(_, query: CallbackQuery):
     await query.edit_message_text(
@@ -61,14 +59,9 @@ Kamu Akan Mengulang Dari Awal Kembali!
 
 👨 Ketika Kamu Ingin Beristirahat Kamu Keluar Dari Bot Saja Jangan Menghapus Pesannya
 Kirim Donasi Jika Anda Terlanjur Menghapus Pesannya Dan Ingin Melanjutkannya!**""",
-    keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    "✅ Mengerti Dan Lanjutkan", callback_data="cbpdkt"
-                ),
-            ]
-        ]
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("✓ Setuju Dan Lanjutkan", callback_data="cbpdkt")]]
+        ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt"))
@@ -81,29 +74,19 @@ SMA. dan loh berniat untuk ngewujudin
 impian loh semua yang belum tercapai,
 yaitu jadian sama **Sabrina**, cewek cantik tapi judes
 yang loh taksir sejak dulu.
-**Berhasil Loh Dapatin Sabrina?**
-**""",
-    keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    "Lanjutkan", callback_data="cbupdate"
-                ),
-            ]
-        ]
+**Berhasil Loh Dapatin Sabrina?**""",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("Lanjutkan", callback_data="cbhelp")]]
+        ),
     )
 
 @Client.on_callback_query(filters.regex("cbmulai"))
 async def cbmulai(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""
+        f"""hi
+
 Kirim Donasi Jika Anda Terlanjur Menghapus Pesannya Dan Ingin Melanjutkannya!**""",
-    keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    "✅ Mengerti Dan Lanjutkan", callback_data="cbupdate"
-                ),
-            ]
-        ]
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbhelp")]]
+        ),
     )
