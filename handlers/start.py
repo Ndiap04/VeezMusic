@@ -52,39 +52,34 @@ async def _human_time_duration(seconds):
 )
 async def start_private(client: Client, message: Message):
     await message.reply_text(
-        f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music on groups through the new Telegram's voice chats!**
+        f"""✨ **Halo Masbro {message.from_user.mention()} !**\n
 
-💡 **Find out all the Bot's commands and how they work by clicking on the » 📚 Commands button!**
+💡 **Silakan Mulai Permainan Untuk Memulai Game Nya , Klik Help Untuk Mendapatkan Bantuan**!
 
-🔖 **To know how to use this bot, please click on the » ❓ Basic Guide button!**""",
+© Powered By : [Sukses Makmur](http://t.me/SuksesMakmur)**""",
         reply_markup=InlineKeyboardMarkup(
-            [
+                        [ 
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group ➕",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    )
-                ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
-                [
-                    InlineKeyboardButton("📚 Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ Donate", url=f"https://t.me/{OWNER_NAME}"),
-                ],
-                [
+                        "🙎‍♂ Mulai Bro 🙍‍♀", callback_data="cbmulai"),
+                ],[
                     InlineKeyboardButton(
-                        "👥 Official Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "📩 Kontak Developer", callback_data="cbkontak"
                     ),
                     InlineKeyboardButton(
-                        "📣 Official Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [
+                        "💌 Tentang Bot ini", callback_data="cbinfo")
+                ],[
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/VeezMusic"
+                        "📝 Komentar", callback_data="cbkomen"
+                    ),
+                    InlineKeyboardButton(
+                        "🎉 Bantuan", callback_data="cbhelp")
+                ],[
+                    InlineKeyboardButton(
+                        "❔ Update", callback_data="cbupdate"
                     )
-                ],
+                ]
             ]
         ),
-        disable_web_page_preview=True,
+     disable_web_page_preview=True
     )
