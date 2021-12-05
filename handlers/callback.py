@@ -52,13 +52,9 @@ async def cbstart(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbmulai"))
 async def cbmulai(_, query: CallbackQuery):
-    await client.send_photo(CallbackQuery.chat.id,
+    await query.send_photo(CallbackQuery.chat.id,
         photo=f"{BOT_IMG}",
-        caption=f"""**{alv} Holla {message.from_user.mention()}, I'm {bn}.**
-{alv} **I'm Working Properly**
-{alv} **Bot : 6.0 LATEST**
-{alv} **My Master : [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
-{alv} **Service Uptime : `{uptime}`**
+        caption=f"""**halo semua**
 **Thanks For Using Me ❤️**""",
     keyboard = InlineKeyboardMarkup(
         [
