@@ -16,35 +16,56 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-💭 **Kirimkan nama artis dan/atau nama lagu dan saya akan mencarikan musik untuk kamu!**
-""",
+        f"""✨ **Halo Masbro {message.from_user.mention()} !**\n
+
+💡 **Silakan Mulai Permainan Untuk Memulai Game Nya , Klik Help Untuk Mendapatkan Bantuan**!
+
+© Powered By : [Sukses Makmur](http://t.me/SuksesMakmur)**""",
         reply_markup=InlineKeyboardMarkup(
-            [
-               [
-                InlineKeyboardButton(
-                    "Perintah", callback_data="close",
+                        [ 
+                [
+                    InlineKeyboardButton(
+                        "🙎‍♂ Mulai Bro 🙍‍♀", callback_data="cbmulai"),
+                ],[
+                    InlineKeyboardButton(
+                        "📩 Kontak Developer", callback_data="cbkontak"
+                    ),
+                    InlineKeyboardButton(
+                        "💌 Tentang Bot ini", callback_data="cbinfo")
+                ],[
+                    InlineKeyboardButton(
+                        "📝 Komentar", callback_data="cbkomen"
+                    ),
+                    InlineKeyboardButton(
+                        "🎉 Bantuan", callback_data="cbhelp")
+                ],[
+                    InlineKeyboardButton(
+                        "❔ Update", callback_data="cbupdate"
                     )
-                ],
+                ]
             ]
         ),
-        disable_web_page_preview=True,
+     disable_web_page_preview=True
     )
 
+#MulaiPermainan
 
-@Client.on_callback_query(filters.regex("cbbasic"))
-async def cbbasic(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""🏮 **Perintah**
+@Client.on_callback_query(filters.regex("cbmulai"))
+async def cbmulai(_, query: CallbackQuery):
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "💨 Download", url=f"https://t.me/RessoMusicRobot?start=Z2V0LTQyMDczNDg3NzQ2ODM2"
+                ),
+            ]
+        ]
+    )
 
-Kirimkan nama artis dan/atau nama lagu dan saya akan mencarikan musik untuk kamu!
+    alive = f"**Hello {message.from_user.mention()}!\n\n 👌Kamu hanya bisa menggunakan mengunduh lagu,\n\n⚡ Untuk bisa mengunduh video Kalian bisa Dibot langsung,atau klik tombol dibawah!"
 
-/song (nama lagu) - cari berdasarkan judul lagu
-/artis (nama artis) - cari berdasarkan nama artis
-/lyrics (nama lagu) - cari berdasarkan judul lagu
-
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 Go Back", callback_data="cbstart")]]
-        ),
+    await message.reply_photo(
+        photo=f"{ALIVE_IMG}",
+        caption=alive,
+        reply_markup=keyboard,
     )
