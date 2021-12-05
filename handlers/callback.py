@@ -52,6 +52,14 @@ async def cbstart(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbmulai"))
 async def cbmulai(_, query: CallbackQuery):
+    await client.send_photo(message.chat.id,
+        photo=f"{BOT_IMG}",
+        caption=f"""**{alv} Holla {message.from_user.mention()}, I'm {bn}.**
+{alv} **I'm Working Properly**
+{alv} **Bot : 6.0 LATEST**
+{alv} **My Master : [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
+{alv} **Service Uptime : `{uptime}`**
+**Thanks For Using Me ❤️**""",
     keyboard = InlineKeyboardMarkup(
         [
             [
@@ -62,10 +70,3 @@ async def cbmulai(_, query: CallbackQuery):
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}!\n\n 👌Kamu hanya bisa menggunakan mengunduh lagu,\n\n⚡ Untuk bisa mengunduh video Kalian bisa Dibot langsung,atau klik tombol dibawah!"
-
-    await message.reply_photo(
-        photo=f"{ALIVE_IMG}",
-        caption=alive,
-        reply_markup=keyboard,
-    )
