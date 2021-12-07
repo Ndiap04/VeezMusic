@@ -84,103 +84,75 @@ yang loh taksir sejak dulu.
 async def cbpdkt2(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**Selamat Datang Dimasa Depan,
-Loh Adalah Seorang Time Traveler**""",
+Loh Adalah Seorang Time Traveler!**
+
+**Artinya Lo punya kemampuan Khusus untuk kembali ke masa lalu**
+
+**Dengan Kemampuan Khusus Ini Loh Berulang Kali Kembali Dari Masa Depan....**
+
+**Untuk Mendapatkan Hati Pujaan loh si Sabrina.**
+
+**Semoga Kali Ini Bisa Berhasil Ya Bro!**""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt3")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt3"))
-async def cbpdkt3(_, query: CallbackQuery):
+async def cbpdkt7(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Artinya Lo punya kemampuan Khusus untuk kembali ke masa lalu**""",
+        f"""😮 : Hmm... Dimana Nih...""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt4")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt4"))
-async def cbpdkt4(_, query: CallbackQuery):
+async def cbpdkt8(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Dengan Kemampuan Khusus Ini Loh Berulang Kali Kembali Dari Masa Depan....**""",
+        f"""😀 : Oh iya ini dikamar gua. Gua harus cepat kesekolah buat ketemu sama sih sabrina!""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt5")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt5"))
-async def cbpdkt5(_, query: CallbackQuery):
+async def cbpdkt9(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Untuk Mendapatkan Hati Pujaan loh si Sabrina.**""",
+        f"""Loh bergegas mengganti baju tidur loh, dengan baju seragam kesekolah loh...""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt6")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt6"))
-async def cbpdkt6(_, query: CallbackQuery):
+async def cbpdkt10(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**Semoga Kali Ini Bisa Berhasil Ya Bro!**""",
+        f"""😰 : Fuhh... Sampe Juga... untung gak telat.""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt7")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt7"))
-async def cbpdkt7(_, query: CallbackQuery):
+async def cbpdkt11(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😮 : Hmm... Dimana Nih...""",
+        f"""😦 : Wahh itu dia sih Sabrina....""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt8")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt8"))
-async def cbpdkt8(_, query: CallbackQuery):
+async def cbpdkt12(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 : Oh iya ini dikamar gua. Gua harus cepat kesekolah buat ketemu sama sih sabrina!""",
+        f"""😨 : Mesti Cepat Gua samperin nih...""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt9")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbpdkt9"))
-async def cbpdkt9(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""Loh bergegas mengganti baju tidur loh, dengan baju seragam kesekolah loh...""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt10")]]
-        ),
-    )
-
-@Client.on_callback_query(filters.regex("cbpdkt10"))
-async def cbpdkt10(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""😰 : Fuhh... Sampe Juga... untung gak telat.""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt11")]]
-        ),
-    )
-
-@Client.on_callback_query(filters.regex("cbpdkt11"))
-async def cbpdkt11(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""😦 : Wahh itu dia sih Sabrina....""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt12")]]
-        ),
-    )
-
-@Client.on_callback_query(filters.regex("cbpdkt12"))
-async def cbpdkt12(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""😨 : Mesti Cepat Gua samperin nih...""",
-        reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbpdkt13")]]
-        ),
-    )
-
-@Client.on_callback_query(filters.regex("cbpdkt13"))
 async def cbpdkt13(_, query: CallbackQuery):
     await query.edit_Message_text(
         f"""ㅤㅤㅤㅤ""",
