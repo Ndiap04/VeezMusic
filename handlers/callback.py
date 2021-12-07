@@ -218,7 +218,7 @@ async def cbfredi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbfredi"))
 async def cbfredi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😣 Rendi : (gile..nih cewe cewe jutek banget)""",
+        f"""😣 **Rendi** : (gile..nih cewe cewe jutek banget)""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbriyan")]]
         ),
@@ -227,7 +227,7 @@ async def cbfredi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbriyan"))
 async def cbriyan(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😶 Rendi : (Gua Harus Nyari Topik...Biar Bisa Ngobrol Terus Bareng Dia)""",
+        f"""😶 **Rendi** : (Gua Harus Nyari Topik...Biar Bisa Ngobrol Terus Bareng Dia)""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbdapur")]]
         ),
@@ -235,7 +235,7 @@ async def cbriyan(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbdapur"))
 async def cbdapur(_, query: CallbackQuery):
-    await query.edit_Message_text(
+    await query.edit_message_text(
         f"""👨 Rendi : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -250,15 +250,6 @@ async def cbsendok(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""😀 Rendi : **Loh Tinggal Dimana?*""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbfilden")]]
-        ),
-    )
-
-@Client.on_callback_query(filters.regex("cbriyan"))
-async def cbriyan(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""😶 Rendi : (Gua Harus Nyari Topik...Biar Bisa Ngobrol Terus Bareng Dia)""",
-        reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbrumah")]]
         ),
     )
@@ -268,22 +259,13 @@ async def cbrumah(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""😑 Sabrina : **Dirumah**.""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbtitik")]]
-        ),
-    )
-
-@Client.on_callback_query(filters.regex("cbtitik"))
-async def cbtitik(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""😤 Rendi : .........""",
-        reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbalamat")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbalamat"))
 async def cbalamat(_, query: CallbackQuery):
-    await query.edit_Message_text(
+    await query.edit_message_text(
         f"""👨 Rendi : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -313,7 +295,7 @@ async def cbpede(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbbijak"))
 async def cbbijak(_, query: CallbackQuery):
-    await query.edit_Message_text(
+    await query.edit_message_text(
         f"""👨 Rendi : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -361,7 +343,7 @@ async def cbkatain(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbpagi"))
 async def cbpagi(_, query: CallbackQuery):
-    await query.edit_Message_text(
+    await query.edit_message_text(
         f"""👨 Rendi : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -427,7 +409,7 @@ async def cbkatain(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbjengkol"))
 async def cbjengkol(_, query: CallbackQuery):
-    await query.edit_Message_text(
+    await query.edit_message_text(
         f"""👨 Rendi : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -457,7 +439,7 @@ async def cbnaik(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbkuxa"))
 async def cbkuxa(_, query: CallbackQuery):
-    await query.edit_Message_text(
+    await query.edit_message_text(
         f"""👨 Rendi : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
