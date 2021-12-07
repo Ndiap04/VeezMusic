@@ -105,7 +105,7 @@ Loh Adalah Seorang Time Traveler!**
 @Client.on_callback_query(filters.regex("cbsendi"))
 async def cbsendi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😮 **Rendi** : Hmm... Dimana Nih...""",
+        f"""😮 **Rendi** : __Hmm... Dimana Nih...__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbbella")]]
         ),
@@ -475,12 +475,12 @@ async def cbngacir(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🤖 : **SABRINA LANGSUNG NGACIR NINGGALIN LOH.**""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbnaik")]]
+            [[InlineKeyboardButton("Lanjutkan", callback_data="cbbicit")]]
         ),
     )
 
-@Client.on_callback_query(filters.regex("cbngacir"))
-async def cbngacir(_, query: CallbackQuery):
+@Client.on_callback_query(filters.regex("cbbicit"))
+async def cbbicit(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""😭😭😭😭😭😭😭😭😭😭😭😭
 **BARU SAMPE** : PDKT 1""",
