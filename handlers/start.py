@@ -91,17 +91,15 @@ async def start_private(client: Client, message: Message):
 async def play_pdkt(client, message):
     await client.send_photo(message.chat.id,
         photo=f"{ALIVE_IMG}",
-        caption=f"""**Hi**""",
+        caption=f"""**PDKT 1**
+
+Tahun ini merupakan tahun terakhir loh 
+di SMA. dan loh berniat untuk ngewujudin
+impian loh semua yang belum tercapai,
+yaitu jadian sama Sabrina, cewek cantik tapi judes
+yang loh taksir sejak dulu.
+Berhasil Loh Dapatin Sabrina?""",
         reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Support", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "Updates", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    )
-                ]
-            ]
-        )
+            [[InlineKeyboardButton("Mainkan", callback_data="cbsendi")]]
+        ),
     )
