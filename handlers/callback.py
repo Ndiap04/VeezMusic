@@ -356,7 +356,7 @@ async def cbsingkong(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbdong"))
 async def cbdong(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 **Rendi** : __Pagi Lagi Jangan Marah² dong, nanti cantik nya ilang loh!__""",
+        f"""😀 **Rendi** : __Pagi Pagi Jangan Marah² dong, nanti cantik nya ilang loh!__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbsinga")]]
         ),
