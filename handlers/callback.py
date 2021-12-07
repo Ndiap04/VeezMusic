@@ -48,6 +48,23 @@ async def cbstart(_, query: CallbackQuery):
      disable_web_page_preview=True
     )
 
+#kontakdeveloper
+
+@Client.on_callback_query(filters.regex("cbcontakdev"))
+async def cbcontakdev(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""🌍 [Situs](https://t.me/SuksesMakmur)
+
+💌 [Telegram](https://t.me/pikyus1)
+   https://t.me/pikyus1
+
+🏠 Alamat
+   **Sensored** """,
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("Kembali", callback_data="cbstart")]]
+        ),
+    )
+
 @Client.on_callback_query(filters.regex("close"))
 async def close(_, query: CallbackQuery):
     await query.message.delete()
