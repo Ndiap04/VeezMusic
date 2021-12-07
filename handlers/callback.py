@@ -401,7 +401,7 @@ async def cbkodok(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbkatain"))
 async def cbkatain(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😊 " **Sabrina** : __Iya lah..kan berangkat nya sendiri.__""",
+        f"""😊 **Sabrina** : __Iya lah..kan berangkat nya sendiri.__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbjengkol")]]
         ),
