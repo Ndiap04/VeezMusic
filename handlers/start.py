@@ -9,6 +9,7 @@ from config import (
     BOT_USERNAME,
     GROUP_SUPPORT,
     OWNER_NAME,
+    ALIVE_IMG,
     UPDATES_CHANNEL,
 )
 from handlers import __version__
@@ -82,4 +83,25 @@ async def start_private(client: Client, message: Message):
             ]
         ),
      disable_web_page_preview=True
+    )
+
+@Client.on_message(
+    command(["play_pdkt", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+)
+async def play_pdkt(client, message):
+    await client.send_photo(message.chat.id,
+        photo=f"{ALIVE_IMG}",
+        caption=f"""**Hi**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Support", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
+                    InlineKeyboardButton(
+                        "Updates", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    )
+                ]
+            ]
+        )
     )
