@@ -105,7 +105,7 @@ Loh Adalah Seorang Time Traveler!**
 @Client.on_callback_query(filters.regex("cbsendi"))
 async def cbsendi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😮 : **Hmm... Dimana Nih...**""",
+        f"""😮 **Rendi** : Hmm... Dimana Nih...""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbbella")]]
         ),
@@ -114,7 +114,7 @@ async def cbsendi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbella"))
 async def cbbella(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 : **Oh iya ini dikamar gua. Gua harus cepat kesekolah buat ketemu sama sih sabrina!**""",
+        f"""😀 **Rendi** : __Oh iya ini dikamar gua. Gua harus cepat kesekolah buat ketemu sama sih sabrina__!""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbsisil")]]
         ),
@@ -132,7 +132,7 @@ async def cbsisil(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsilvi"))
 async def cbsilvi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😰 Rendi : Fuhh... Sampe Juga... untung gak telat.""",
+        f"""😰 **Rendi** : __Fuhh... Sampe Juga... untung gak telat.__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbsalsa")]]
         ),
@@ -141,7 +141,7 @@ async def cbsilvi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsalsa"))
 async def cbsalsa(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😦 Rendi : **Wahh itu dia sih Sabrina**....""",
+        f"""😦 **Rendi** : __Wahh itu dia sih Sabrina__....""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbfalah")]]
         ),
@@ -150,7 +150,7 @@ async def cbsalsa(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbfalah"))
 async def cbfalah(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😨 Rendi : **Mesti Cepat Gua samperin nih**...""",
+        f"""😨 **Rendi** : __Mesti Cepat Gua samperin nih__...""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbfilden")]]
         ),
@@ -159,13 +159,13 @@ async def cbfalah(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbfilden"))
 async def cbfilden(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👨 Rendi : .....""",
+        f"""👨 **Rendi** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("Menyapanya", callback_data="cbhelp")],
                 [InlineKeyboardButton("Sok Kenal", callback_data="cbdewi")],
                 [InlineKeyboardButton("Pura² Salah Orang", callback_data="cbhelp")],
-                [InlineKeyboardButton("Pura² Menabraknya", callback_data="close")],
+                [InlineKeyboardButton("Pura-Pura Menabraknya", callback_data="close")],
             ]
         ),
     )
@@ -173,7 +173,7 @@ async def cbfilden(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbdewi"))
 async def cbdewi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 Rendi: **Hai...Ini Sabrina Anak IPA 1 kan?**...""",
+        f"""😀 **Rendi**: __Hai...Ini Sabrina Anak IPA 1 kan?__...""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbferi")]]
         ),
@@ -182,7 +182,7 @@ async def cbdewi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbferi"))
 async def cbferi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😦 Sabrina : **Iya.. Kenapa?**...""",
+        f"""😦 **Sabrina** : __Iya,Kenapa?__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbsakinah")]]
         ),
@@ -191,7 +191,7 @@ async def cbferi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsakinah"))
 async def cbsakinah(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😅 Rendi : **ehhh...gpp ko , salam kenal ya!**...""",
+        f"""😅 **Rendi** : __Ehhh...Gpp ko,Salam kenal ya!__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cblinda")]]
         ),
@@ -200,7 +200,7 @@ async def cbsakinah(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cblinda"))
 async def cblinda(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😬 Sabrina : ......""",
+        f"""😬 **Sabrina** : ......""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbfredi")]]
         ),
@@ -209,7 +209,7 @@ async def cblinda(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbfredi"))
 async def cbfredi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😏 Sabrina : **iya...lam kenal juga.**...""",
+        f"""😏 **Sabrina** : __Iya...Lam kenal juga.__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbamal")]]
         ),
@@ -218,7 +218,7 @@ async def cbfredi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbamal"))
 async def cbamal(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😣 **Rendi** : (gile..nih cewe cewe jutek banget)""",
+        f"""😣 **Rendi** : __(gile..nih cewe jutek banget)__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbriyan")]]
         ),
@@ -227,7 +227,7 @@ async def cbamal(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbriyan"))
 async def cbriyan(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😶 **Rendi** : (Gua Harus Nyari Topik...Biar Bisa Ngobrol Terus Bareng Dia)""",
+        f"""😶 **Rendi** : __(Gua Harus Nyari Topik...Biar Bisa Ngobrol Terus Bareng Dia)__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbdapur")]]
         ),
@@ -236,7 +236,7 @@ async def cbriyan(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbdapur"))
 async def cbdapur(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👨 Rendi : .....""",
+        f"""👨 **Rendi** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("Loh Tinggal Dimana?", callback_data="cbsendok")],
@@ -248,7 +248,7 @@ async def cbdapur(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsendok"))
 async def cbsendok(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 Rendi : **Loh Tinggal Dimana?*""",
+        f"""😀 **Rendi** : __Loh Tinggal Dimana?__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbrumah")]]
         ),
@@ -257,7 +257,7 @@ async def cbsendok(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbrumah"))
 async def cbrumah(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😑 Sabrina : **Dirumah**.""",
+        f"""😑 **Sabrina** : __Dirumah.__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbalamat")]]
         ),
@@ -266,7 +266,7 @@ async def cbrumah(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbalamat"))
 async def cbalamat(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👨 Rendi : .....""",
+        f"""👨 **Rendi** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("Aduh Pinter Banget", callback_data="cbpinter")],
@@ -278,7 +278,7 @@ async def cbalamat(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbpinter"))
 async def cbpinter(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 Rendi : Aduh Pinter Banget""",
+        f"""😀 **Rendi** : __Aduh Pinter Banget__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbpede")]]
         ),
@@ -287,7 +287,7 @@ async def cbpinter(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbpede"))
 async def cbpede(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😁 Sabrina : Makasih..Emang gua pinter""",
+        f"""😁 **Sabrina** : __Makasih..Emang gua pinter!__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbbijak")]]
         ),
@@ -296,7 +296,7 @@ async def cbpede(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbijak"))
 async def cbbijak(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👨 Rendi : .....""",
+        f"""👨 **Rendi** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("Ko Lu Pede Banget?", callback_data="cbbabi")],
@@ -308,7 +308,7 @@ async def cbbijak(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbabi"))
 async def cbbabi(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😁 Rendi : Ko Lu Pede Banget?""",
+        f"""😁 **Rendi** : __Ko Lu Pede Banget?__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbmasalah")]]
         ),
@@ -317,7 +317,7 @@ async def cbbabi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbmasalah"))
 async def cbmasalah(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😤 Sabrina : Dihh,Kenapa Masalah buat loh?""",
+        f"""😤 **Sabrina** : __Dihh,Kenapa Masalah buat loh?__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbgalak")]]
         ),
@@ -326,7 +326,7 @@ async def cbmasalah(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbgalak"))
 async def cbgalak(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😁 Rendi : Ehhh...gua bercanda ko , ko lu galak gitu sih.""",
+        f"""😁 **Rendi** : __Ehhh...gua bercanda ko , ko lu galak gitu sih.__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbtembok")]]
         ),
@@ -335,7 +335,7 @@ async def cbgalak(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbtembok"))
 async def cbtembok(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😠 Sabrina : Tuh..gua malah dikatain lagi!""",
+        f"""😠 **Sabrina** : __Tuh..gua malah dikatain lagi!__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbsingkong")]]
         ),
@@ -344,7 +344,7 @@ async def cbtembok(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsingkong"))
 async def cbsingkong(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👨 Rendi : .....""",
+        f"""👨 **Rendi** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("Pagi Pagi Jangan Marah² dong", callback_data="cbdong")],
@@ -356,7 +356,7 @@ async def cbsingkong(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbdong"))
 async def cbdong(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 Rendi : pagi pagi jangan marah marah dong, nanti cantik nya ilang loh!""",
+        f"""😀 **Rendi** : __Pagi Lagi Jangan Marah² dong, nanti cantik nya ilang loh!__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbsinga")]]
         ),
@@ -365,7 +365,7 @@ async def cbdong(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsinga"))
 async def cbsinga(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😑 Sabrina : .....""",
+        f"""😑 **Sabrina** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbnama")]]
         ),
@@ -374,7 +374,7 @@ async def cbsinga(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbnama"))
 async def cbnama(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 Sabrina : hahaha iya deh....btw nama lu siapa?""",
+        f"""😀 **Sabrina** : __hahaha iya deh....btw nama lu siapa?__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbmusang")]]
         ),
@@ -383,7 +383,7 @@ async def cbnama(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbmusang"))
 async def cbmusang(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😁 Rendi : gua Rendi dari IPA ...""",
+        f"""😁 **Rendi** : __Gua Rendi dari IPA 5...__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbkodok")]]
         ),
@@ -392,16 +392,16 @@ async def cbmusang(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbkodok"))
 async def cbkodok(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😊 Rendi : btw sendirian aja sab?""",
+        f"""😊 **Rendi** : __btw sendirian aja sab?__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbalamat")]]
+            [[InlineKeyboardButton("Lanjutkan", callback_data="cbkatain")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbkatain"))
 async def cbkatain(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😊 Sabrina : iya lah..kan berangkat nya sendiri.""",
+        f"""😊 " **Sabrina** : __Iya lah..kan berangkat nya sendiri.__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbjengkol")]]
         ),
@@ -410,11 +410,11 @@ async def cbkatain(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbjengkol"))
 async def cbjengkol(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👨 Rendi : .....""",
+        f"""👨 **Rendi** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("btw loh cantik banget ya sab", callback_data="cbdong")],
-                [InlineKeyboardButton("lain kali bareng aja", callback_data="cbguru")],
+                [InlineKeyboardButton("Btw loh cantik banget ya Sab", callback_data="cbdong")],
+                [InlineKeyboardButton("Lain kali bareng aja", callback_data="cbguru")],
             ]
         ),
     )
@@ -422,7 +422,7 @@ async def cbjengkol(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbguru"))
 async def cbguru(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😊 Rendi : lain kali bareng aja sama gua..""",
+        f"""😊 **Rendi** : __Lain kali bareng aja sama gua..__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbnaik")]]
         ),
@@ -431,7 +431,7 @@ async def cbguru(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbnaik"))
 async def cbnaik(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 Sabrina : emg biasanya loh naik apa?.""",
+        f"""😀 **Sabrina** : __Emg biasanya loh naik apa?__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbkuxa")]]
         ),
@@ -440,11 +440,11 @@ async def cbnaik(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbkuxa"))
 async def cbkuxa(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""👨 Rendi : .....""",
+        f"""👨 **Rendi** : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("naik angkot", callback_data="cbangkot")],
-                [InlineKeyboardButton("jalan kaki", callback_data="cbjalan")],
+                [InlineKeyboardButton("Jalan Kaki", callback_data="cbjalan")],
                 [InlineKeyboardButton("bawa motor", callback_data="cbbus")],
                 [InlineKeyboardButton("bawa mobil", callback_data="cbtruck")],
             ]
@@ -454,7 +454,7 @@ async def cbkuxa(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbjalan"))
 async def cbjalan(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😁 Rendi : Jalan Kaki Sab.""",
+        f"""😁 **Rendi** : __Jalan Kaki Sab.__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbsory")]]
         ),
@@ -463,8 +463,8 @@ async def cbjalan(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsory"))
 async def cbsory(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😄 Sabrina : Duhh... Sory Ya,tiba tiba perut gua mules nih.
-Gu pergi dulu ya.bye!""",
+        f"""😄 **Sabrina** : __Duhh... Sory Ya,tiba tiba perut gua mules nih.
+Gu pergi dulu ya.bye!__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbngacir")]]
         ),
