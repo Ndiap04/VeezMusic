@@ -158,7 +158,7 @@ async def cbfalah(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbfilden"))
 async def cbfilden(_, query: CallbackQuery):
-    await query.edit_Message_text(
+    await query.edit_message_text(
         f"""👨 Rendi : .....""",
         reply_markup=InlineKeyboardMarkup(
             [
