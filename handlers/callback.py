@@ -328,12 +328,12 @@ async def cbgalak(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""😁 Rendi : Ehhh...gua bercanda ko , ko lu galak gitu sih.""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbkatain")]]
+            [[InlineKeyboardButton("Lanjutkan", callback_data="cbtembok")]]
         ),
     )
 
-@Client.on_callback_query(filters.regex("cbkatain"))
-async def cbkatain(_, query: CallbackQuery):
+@Client.on_callback_query(filters.regex("cbtembok"))
+async def cbtembok(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""😠 Sabrina : Tuh..gua malah dikatain lagi!""",
         reply_markup=InlineKeyboardMarkup(
