@@ -170,8 +170,6 @@ async def cbfilden(_, query: CallbackQuery):
         ),
     )
 
-#sokkenal
-
 @Client.on_callback_query(filters.regex("cbdewi"))
 async def cbdewi(_, query: CallbackQuery):
     await query.edit_message_text(
@@ -246,8 +244,6 @@ async def cbdapur(_, query: CallbackQuery):
             ]
         ),
     )
-
-#lohtinggaldmna
 
 @Client.on_callback_query(filters.regex("cbsendok"))
 async def cbsendok(_, query: CallbackQuery):
@@ -326,8 +322,6 @@ async def cbbijak(_, query: CallbackQuery):
             ]
         ),
     )
-
-#pedebanget
 
 @Client.on_callback_query(filters.regex("cbbabi"))
 async def cbbabi(_, query: CallbackQuery):
