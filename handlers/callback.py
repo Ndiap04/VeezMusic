@@ -248,7 +248,7 @@ async def cbdapur(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsendok"))
 async def cbsendok(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😀 Rendi : **Loh Tinggal Dimana?*"""",
+        f"""😀 Rendi : **Loh Tinggal Dimana?*""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbfilden")]]
         ),
