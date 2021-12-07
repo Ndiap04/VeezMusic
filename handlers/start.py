@@ -10,6 +10,7 @@ from config import (
     GROUP_SUPPORT,
     OWNER_NAME,
     ALIVE_IMG,
+    START_IMG,
     UPDATES_CHANNEL,
 )
 from handlers import __version__
@@ -51,18 +52,19 @@ async def _human_time_duration(seconds):
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
-async def start_private(client: Client, message: Message):
-    await message.reply_text(
-        f"""✨ **Halo Masbro {message.from_user.mention()} !**\n
+async def start(client, message):
+    await client.send_photo(message.chat.id,
+        photo=f"{START_IMG}",
+        caption=f"""**Halo MashBro!!** {message.from_user.mention()} !**\n
 
-💡 **Silakan Mulai Permainan Untuk Memulai Game Nya , Klik Help Untuk Mendapatkan Bantuan**!
+/playfree_pdkt_kkcdc (Playing Game)
 
 © Powered By : [Sukses Makmur](http://t.me/SuksesMakmur)**""",
         reply_markup=InlineKeyboardMarkup(
                         [ 
                 [
                     InlineKeyboardButton(
-                        "🙎‍♂ Mulai Bro 🙍‍♀", callback_data="cbmulai"),
+                        "🙎‍♂ Donasi Untuk Developer 🙍‍♀", callback_data="cbgaktau"),
                 ],[
                     InlineKeyboardButton(
                         "📩 Kontak Developer", callback_data="cbkontak"
@@ -86,9 +88,9 @@ async def start_private(client: Client, message: Message):
     )
 
 @Client.on_message(
-    command(["play_pdkt", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
+    command(["playfree_pdkt_kkcdc", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
-async def play_pdkt(client, message):
+async def playfree_pdkt_kkcdc(client, message):
     await client.send_photo(message.chat.id,
         photo=f"{ALIVE_IMG}",
         caption=f"""**PDKT 1**
@@ -100,6 +102,6 @@ yaitu jadian sama Sabrina, cewek cantik tapi judes
 yang loh taksir sejak dulu.
 Berhasil Loh Dapatin Sabrina?""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Mainkan", callback_data="cbsendi")]]
+            [[InlineKeyboardButton("Mainkan", callback_data="cbsabrina")]]
         ),
     )
