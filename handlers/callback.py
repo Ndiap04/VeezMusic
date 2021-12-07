@@ -289,7 +289,7 @@ async def cbpede(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""😁 Sabrina : Makasih..Emang gua pinter""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Lanjutkan", callback_data="cbalamat")]]
+            [[InlineKeyboardButton("Lanjutkan", callback_data="cbbijak")]]
         ),
     )
 
@@ -317,7 +317,7 @@ async def cbbabi(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbmasalah"))
 async def cbmasalah(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""😤 Sabrina : Dihh,Kenapa Maslah buat loh?""",
+        f"""😤 Sabrina : Dihh,Kenapa Masalah buat loh?""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Lanjutkan", callback_data="cbgalak")]]
         ),
